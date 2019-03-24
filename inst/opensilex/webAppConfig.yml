@@ -1,0 +1,47 @@
+# function available minimum required
+availableFunctions:
+  - plotVarRel
+integratedFunctions:
+# web client integrated function configuration
+  # advanced
+  plotVarRel:
+    description : | 
+      An app that help you to confront two variables
+    label: "Confront two variables"
+    type: graphic
+    graphicType: plotly
+    formParameters:
+      startDate:
+        label: "Start date of data"
+        type: date
+        format: yyyy-mm-dd
+        dateValue: Y-m-d
+      endDate:
+        label: "End date of data"
+        type: date
+        format: yyyy-mm-dd
+        dateValue: Y-m-d
+      varY:
+        label: "Variable Y"
+        type: list
+        RfunctionValues: variableList
+        maxSelectedItem: 1
+        required: true
+      varX:
+        label: "Variable X"
+        type: list
+        RfunctionValues: variableList
+        maxSelectedItem: 1
+        required: true
+      trend:
+        label: "Trend"
+        type: boolean
+        defaultValue: false
+      token:
+        type: string
+        visibility: hidden
+        required: true
+      wsUrl:
+        type: string
+        visibility: hidden
+        required: true
