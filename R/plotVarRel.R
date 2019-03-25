@@ -45,7 +45,7 @@ plotVarRel <- function(varX, varY, startDate = NULL, endDate = NULL, trend = FAL
   phisWSClientR::initializeClientConnection(apiID="ws_private", url = wsUrl)
 
   ### Collecting Data
-  variableList <- variableList(token = token)
+  variableList <- variableList(token = token, wsUrl = wsUrl)
   ## Data
   varURI <- list(varX, varY)
   Data = lapply(varURI,FUN = function(uri){
